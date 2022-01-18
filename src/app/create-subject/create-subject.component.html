@@ -1,0 +1,49 @@
+<div class="position-relative">
+    <!-- Hero for FREE version -->
+    <section class="section section-lg section-hero section-shaped">
+        <!-- Background circles -->
+        <div class="shape shape-style-1 shape-others">
+            <span class="span-150"></span>
+            <span class="span-50"></span>
+            <span class="span-50"></span>
+            <span class="span-75"></span>
+            <span class="span-100"></span>
+            <span class="span-75"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+        </div>
+        <form class="form-row" [formGroup]="subjectFormGroup" >
+            <div class="form-group col-md-3">
+                <label>Disciplina</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="credite">Credite</label>
+                <input type="text" class="form-control" formControlName="credits" id="credite">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="media">Media elevului</label>
+                <input type="text" class="form-control" formControlName="average" id="media">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="ore">Total de ore</label>
+                <input type="text" class="form-control" formControlName="hours" id="ore">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="semestrul">Semestrul</label>
+                <input type="text" class="form-control" formControlName="semester" id="semestrul">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="examen">EXAMEN/VP</label>
+                <input type="text" class="form-control" formControlName="exams" id="examen">
+            </div>
+            <span class="check"></span>
+            <div class="form-group col-md-3">
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+            </div>
+        </form>
+    </section>
+</div>

@@ -1,0 +1,7 @@
+{
+  "*": {
+    "secure": false,
+    "crossOrigin": true,
+    "logLevel": "debug"
+  }
+}

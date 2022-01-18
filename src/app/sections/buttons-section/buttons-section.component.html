@@ -1,0 +1,46 @@
+<section class="section section-components pb-0" id="section-components" >
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-40">
+                <button class="btn btn-sm btn-outline-success" type="button" [routerLink]="['/create-subject']">Creare</button>
+
+                <!-- Basic elements -->
+                <h2 class="mb-5">
+                    <span>Catalog</span>
+                </h2>
+
+                <div class="fresh-table full-color-orange full-screen-table">
+                    <!--
+                      Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
+                      Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
+                    -->
+                    <table id="fresh-table" class="table">
+                        <thead>
+                        <th data-field="id">ID</th>
+                        <th data-field="name" data-sortable="true">Disciplina</th>
+                        <th data-field="exams" data-sortable="true">EXAMEN/VP</th>
+                        <th data-field="semester">Semestrul</th>
+                        <th data-field="average" data-formatter="operateFormatter">Media</th>
+                        <th data-field="credits" data-formatter="operateFormatter">Credite</th>
+                        <th data-field="hours" data-formatter="operateFormatter">Numar total de ore</th>
+                        <th data-field="actions" data-formatter="operateFormatter">Actiuni</th>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor = "let subject of subjects">
+                            <td>{{subject.id}}</td>
+                            <td>{{subject.name}}</td>
+                            <td>{{subject.exams}}</td>
+                            <td>{{subject.semester}}</td>
+                            <td>{{subject.average}}</td>
+                            <td>{{subject.credits}}</td>
+                            <td>{{subject.hours}}</td>
+                            <button class="btn btn-sm btn-outline-warning" type="button" [routerLink]="['/edit-subject', subject.id]">Editare</button>
+                            <button class="btn btn-sm btn-outline-danger" type="button" (click)="onDelete(subject.id)">Stergere</button>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
